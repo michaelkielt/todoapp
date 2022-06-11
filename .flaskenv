@@ -1,0 +1,2 @@
+FLASKAPP=todoapp
+FLASK_ENV=development
