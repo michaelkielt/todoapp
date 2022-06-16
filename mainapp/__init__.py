@@ -1,7 +1,7 @@
 from flask import Flask
 
-from main.routes import main
-from ..extensions import mongo
+from .main.routes import main
+from .extensions import mongo
 
 def create_app():
     app = Flask(__name__)
