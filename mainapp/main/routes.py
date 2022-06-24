@@ -6,7 +6,9 @@ main = Blueprint('main', __name__)
 
 @main.route('/')
 def index():
-    return render_template ('index.html')
+    todos_collection = mongo.db.todos
+    todos = todos_collection.find()
+    return render_template ('index.html', todos=todos)
 
 @main.route('/add_todo', methods=['POST'])
 def add_todo():

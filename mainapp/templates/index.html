@@ -52,11 +52,7 @@
 
 					<ul class="list-group t20">
 						{% for todo in todos %}
-						<a href="#">
-							<li class="list-group-item {% if todo.complete %}todo-completed{% endif %}">
-								{{ todo.text }}
-							</li>
-						</a>
+						<li class="list-group-item">{{ todo.text }}</li>
 						{% endfor %}
 					</ul>
 				</div>
