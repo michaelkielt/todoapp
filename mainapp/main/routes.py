@@ -24,3 +24,8 @@ def complete_todo(oid):
     todos_collection.find_one_and_update({"_id": ObjectId(oid)}, {"$set": {"complete": True}})
     return redirect(url_for('main.index'))
    
+@main.route('/delete_completed')
+def delete_completed():
+    todos_collection = mongo.db.todos
+    todos_collection.delete_many({'complete' : True})
+    return redirect(url_for('main.index'))
