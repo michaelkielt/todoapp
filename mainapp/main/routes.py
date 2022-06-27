@@ -21,8 +21,6 @@ def add_todo():
 @main.route('/complete_todo/<oid>')
 def complete_todo(oid):
     todos_collection = mongo.db.todos
-    todo_item = todos_collection.find_one({'_id' : ObjectId(oid)})
-    todo_item['complete'] = True
-    todos_collection.save(todo_item)
+    todos_collection.find_one_and_update({"_id": ObjectId(oid)}, {"$set": {"complete": True}})
     return redirect(url_for('main.index'))
    
