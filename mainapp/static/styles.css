@@ -1,12 +1,12 @@
 body {
-	background: rgba(44, 62, 80, .8);
+	background: rgba(0, 0, 0, 0.918);
 	font-family: 'Oswald', 'Futura', sans-serif;
 }
 #wrapper {
 	margin-top: 10% !important;
 }
 #content {
-	background: beige;
+	background: rgb(34, 133, 100);
 	padding: 25px;
 }
 #content > h2 {
