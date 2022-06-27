@@ -22,9 +22,13 @@ body {
 }
 .todo-completed {
 	text-decoration: line-through;
-	background: rgba(149, 165, 166, .3);
+	background: rgb(233, 239, 240);
 }
 footer {
 	margin-top: 20px;
 	color: white;
+}
+
+h2 {
+	color: aliceblue;
 }
